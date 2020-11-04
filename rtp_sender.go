@@ -41,7 +41,7 @@ func main() {
             log.Printf("send rtp pkt error, idx:%d err: %v", idx, err)
             return
         }
-        time.Sleep(120*1000000000)
+        time.Sleep(120*time.Microsecond)
         idx += 1400
     }
 }
