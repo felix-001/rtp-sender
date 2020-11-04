@@ -6,6 +6,7 @@ import (
     "os"
     "strconv"
     "net"
+    "time"
 )
 
 func net_init(_ip string, port int) (*net.UDPConn, error) {
@@ -40,6 +41,7 @@ func main() {
             log.Printf("send rtp pkt error, idx:%d err: %v", idx, err)
             return
         }
+        time.Sleep(120*1000000000)
         idx += 1400
     }
 }
